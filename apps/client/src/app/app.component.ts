@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { AppService } from './app.service';
 import { Slide } from '@podname/api-interfaces';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'podname-root',
@@ -12,7 +13,11 @@ import { Slide } from '@podname/api-interfaces';
 export class AppComponent implements OnInit {
   slides$: Observable<Slide[]> = new Observable<Slide[]>();
 
-  constructor(private readonly service: AppService) {}
+  constructor(private readonly service: AppService, config: NgbCarouselConfig) {
+    config.interval = 0;
+    config.keyboard = true;
+    config.pauseOnHover = true;
+  }
 
   ngOnInit(): void {
     this.loadSlides();

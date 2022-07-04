@@ -5,4 +5,6 @@ export interface Message {
 export interface Slide {
   id: string;
   path: string;
+  title: string;
+  short: string;
 }
