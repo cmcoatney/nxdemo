@@ -9,7 +9,7 @@
     "serve:api": "nx run api:serve",
     "serve:web": "ng serve --open",
     "serve:all": "concurrently \"npm run serve:api\" \"npm run serve:web\"",
-    "serve": "",
+    "serve:json": "json-server server/db.json",
     "build": "nx build",
     "test": "nx test"
   },
@@ -62,6 +62,7 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.2.3",
     "jest-preset-angular": "11.1.1",
+    "json-server": "^0.17.0",
     "nx": "13.9.6",
     "prettier": "^2.5.1",
     "ts-jest": "27.0.5",

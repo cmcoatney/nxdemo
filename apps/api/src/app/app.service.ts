@@ -1,9 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from '@podname/api-interfaces';
+
+import { Slide } from '@podname/api-interfaces';
+
 
 @Injectable()
 export class AppService {
-  getData(): Message {
-    return { message: 'Welcome to api!' };
-  }
+
+getData(): Slide[] { return []; }
+
+
 }
