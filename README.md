@@ -16,6 +16,16 @@ This project was generated using [Nx](https://nx.dev).
 
 [Interactive Tutorial](https://nx.dev/tutorial/01-create-application)
 
+
+
+## Concurrently
+
+A package.json script is set up to run the api & client concurrently using the concurrently package.
+
+``` zsh
+yarn start
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
