@@ -1,23 +1,16 @@
 <div class="container">
   <div style="text-align: center">
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
+    <podname-nx></podname-nx>
+  </div>
+
+  <br />
+  <div class="container-fluid">
+    <ngb-carousel data-interval="0">
+      <ng-template ngbSlide *ngFor="let image of slides$ | async">
+        <div class="wrapper">
+          <img [src]="image.path" alt="Random first slide" />
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
 </div>
-
-<br />
-<div class="container-fluid">
-  <ngb-carousel  data-interval="0">
-    <ng-template ngbSlide *ngFor="let image of slides$ | async">
-      <div class="wrapper">
-        <img [src]="image.path" alt="Random first slide" />
-      </div>
-    </ng-template>
-  </ngb-carousel>
-</div>
-</div>
-
-
-

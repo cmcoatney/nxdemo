@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Slide } from '@podname/api-interfaces';
 import { Observable } from 'rxjs';
-import { AppService } from '../app.service';
+
+import { SlidesService } from '@podname/data';
+import { Slide } from '@podname/api-interfaces';
 
 @Component({
   selector: 'podname-list',
@@ -11,7 +12,7 @@ import { AppService } from '../app.service';
 export class ListComponent implements OnInit {
   slides$: Observable<Slide[]> = new Observable<Slide[]>();
 
-  constructor(private readonly service: AppService) {}
+  constructor(private readonly service: SlidesService) {}
 
   ngOnInit(): void {
     this.loadSlides();

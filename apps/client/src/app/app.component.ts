@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { AppService } from './app.service';
+import { SlidesService } from '@podname/data';
+
 import { Slide } from '@podname/api-interfaces';
+
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -13,7 +15,10 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent implements OnInit {
   slides$: Observable<Slide[]> = new Observable<Slide[]>();
 
-  constructor(private readonly service: AppService, config: NgbCarouselConfig) {
+  constructor(
+    private readonly service: SlidesService,
+    config: NgbCarouselConfig
+  ) {
     config.interval = 0;
     config.keyboard = true;
     config.pauseOnHover = true;
