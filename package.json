@@ -10,7 +10,7 @@
     "serve:web": "ng serve --open",
     "serve:all": "concurrently \"npm run serve:api\" \"npm run serve:web\"",
     "serve:json": "json-server server/db.json",
-    "serve:portal": "nx run admin:serve --port 4300 --open",
+    "serve:admin": "nx run admin:serve --port 4300 --open",
     "build": "nx build",
     "test": "nx test"
   },
